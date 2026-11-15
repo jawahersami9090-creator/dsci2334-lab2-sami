@@ -44,4 +44,14 @@ ax.set_ylabel("Chance of Admit")
 ax.set_title("GRE Score vs Chance of Admit")
 st.pyplot(fig)
 
-# Exercise 1:
+# Exercise 1: histogram of CGPA
+st.subheader("CGPA distribution")
+fig2, ax2 = plt.subplots()
+ax2.hist(view["CGPA"], bins=15)
+ax2.set_xlabel("CGPA")
+ax2.set_ylabel("Number of students")
+st.pyplot(fig2)
+
+# Data table
+st.subheader("First 20 matching students")
+st.dataframe(view.head(20))
